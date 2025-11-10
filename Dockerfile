@@ -12,7 +12,7 @@ ARG JAR_FILE=/workspace/target/cadastro-usuario-0.0.1-SNAPSHOT.jar
 COPY --from=build ${JAR_FILE} /app/app.jar
 WORKDIR /app
 
-EXPOSE 8081
+EXPOSE 8080
 
 RUN addgroup --system app && adduser --system --ingroup app appuser \
 	&& chown -R appuser:app /app
